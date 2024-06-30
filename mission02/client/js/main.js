@@ -30,20 +30,20 @@ nav.on('click', 'li', function(e){
 
     $(this).addClass('is-active'); // active Class 추가
     // console.log(e)
-
-    if (item) {
-        // GPT의 도움을 받고있어요..
-        const nameLowerCase = item.name.toLowerCase();
-
-        $('.visual img').attr({
-          'name': `./assets/${nameLowerCase}.jpeg`,
-          'color': '',
-          'alt': '',
-        });
-      }
     
-
-})
+    if (item) {
+      console.log(data[e.src])
+      // GPT의 도움을 받고있어요..
+      
+      $('.visual img').attr({
+        'src': `./assets/${data.name}.jpeg`,
+        'color': `linear-gradient(to bottom, 'colorA','colorB')`,
+        'alt': data.alt,
+      });
+    }
+    
+    
+  })
 
 
 
